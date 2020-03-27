@@ -54,5 +54,7 @@ func FindSmallestWindowOfSubstring(str string, pattern string) {
 
 func main() {
 	str1 := "this is a test sring"
+	fmt.Println("the given string is ", str1)
+	fmt.Println("the pattern is tist")
 	FindSmallestWindowOfSubstring(str1, "tist")
 }
