@@ -16,6 +16,7 @@ func FindSmallestWindowOfSubstring(str string, pattern string) {
 	pattern_length := len(pattern)
 	var i int
 	min_window_length := MaxInt
+	var start_indx int
 	for _, char := range pattern {
 		if pattern_hash[char] == 0 {
 			pattern_hash[char] = s.Count(pattern, string(char))
@@ -44,16 +45,17 @@ func FindSmallestWindowOfSubstring(str string, pattern string) {
 			length := j - i + 1
 			if min_window_length > length {
 				min_window_length = length
+				start_indx = i - 1
 			}
 		}
 
 	}
 
-	fmt.Println("The minimun window length is ", min_window_length, "and the starting index is ", i-1)
+	fmt.Println("The minimun window length is ", min_window_length, "and the starting index is ", start_indx)
 }
 
 func main() {
-	str1 := "this is a test sring"
+	str1 := "this is a test sringhsjcdht"
 	fmt.Println("the given string is ", str1)
 	fmt.Println("the pattern is tist")
 	FindSmallestWindowOfSubstring(str1, "tist")
