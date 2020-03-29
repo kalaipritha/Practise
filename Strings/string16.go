@@ -19,7 +19,7 @@ func SubstringContainingAllVowel(str1 string) {
 		if string(s1) == "a" || string(s1) == "e" || string(s1) == "i" || string(s1) == "o" || string(s1) == "u" {
 			varmap[s1]++
 			str = str + string(s1)
-			if varmap['a'] >= 1 && varmap['u'] >= 1 && varmap['e'] >= 1 && varmap['i'] >= 1 && varmap['o'] >= 1 {
+			if len(varmap) == 5 {
 				fmt.Println(str)
 			}
 
@@ -31,6 +31,6 @@ func SubstringContainingAllVowel(str1 string) {
 }
 
 func main() {
-	str1 := "aeoibsddaeiofuddudb"
+	str1 := "aeiouaskjdfhuaioo"
 	SubstringContainingAllVowel(str1)
 }
