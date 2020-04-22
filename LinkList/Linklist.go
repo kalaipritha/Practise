@@ -45,3 +45,13 @@ func (p *node) display() error {
 
 	return nil
 }
+
+func (p *node) delete(n int) {
+	curr := p.head
+
+	if curr.data == n {
+		p := curr.next
+		curr.next = p.next
+		p.next = nil
+	}
+}
